@@ -78,9 +78,11 @@ final class init
             );
 
             $currentTime = new Datetime("now");
-            $startTime = $currentTime->format('U');
+            $fromTime = $currentTime->format('U');
             $currentTime->modify('+1 year');
-            $endTime = $currentTime->format('U');
+            $toTime = $currentTime->format('U');
+            $startTime = rand($fromTime, $toTime);
+            $endTime = rand($fromTime, $toTime);
 
             $resultsArrayKey = rand(0, 3);
             $result = $resultsArray[$resultsArrayKey];
