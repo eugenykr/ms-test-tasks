@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task №5</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.slim.js"
+            integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+<style>
+    body {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .testbutton {
+        width: 50px;
+        height: 30px;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        background-color: white;
+        border: 5px solid #89abd3;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<div class="wrapper">
+    <button class="testbutton">1</button>
+    <button class="testbutton">2</button>
+    <button class="testbutton">3</button>
+</div>
+<script>
+    $(document).on('click', '.testbutton', function (event) {
+        event.preventDefault();
+        $(this).parent().append( $('.testbutton')[0] );
+    });
+</script>
+</body>
+</html>
